@@ -28,9 +28,7 @@ def timeConversion(s):
             new_time_int = int(time[0]) - 12
             new_time = "0" + str(new_time_int) + ":" + time[1] + ":" + time[2]
             return new_time
-    
-    
-    # return s
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
