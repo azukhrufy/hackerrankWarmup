@@ -20,19 +20,8 @@ import sys
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
     # Write your code here
-    app_count = or_count = loc =  0 
-    for apple in apples:
-        loc = a + apple
-        if loc >= s and loc <= t:
-            app_count +=1
-    
-    for orange in oranges:
-        loc = b + orange
-        if loc >= s and loc <= t:
-            or_count += 1
-            
-    print(app_count)
-    print(or_count)
+    print(sum([1 for apple in apples if (apple+a) >= s and (apple+a <= t) ]))
+    print(sum([1 for orange in oranges if (orange+b) >= s and (orange+b <= t) ]))
 
 if __name__ == '__main__':
     first_multiple_input = input().rstrip().split()
